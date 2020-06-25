@@ -4,45 +4,77 @@
  <head>
   <title>Double Pendulum</title>
   <script src="double_pendulum.js"></script>
+  <style>
+ul {
+	list-style-type: none;
+}
+label {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	display: block;
+}
+.desc {
+	margin-left: 20px;
+	font-style: italic;
+}
+  </style>
  </head>
  <body>
   <canvas id="canvas" width="400px" height="400px"></canvas>
   <ul>
    <li>
-    <label>&alpha;</label>
-    <input type="number" id="a" step="0.01" value="1" >
+    <label>m<sub>a</sub> =
+     <input type="number" id="ma" step="0.1" min="0" value="1" /> kg
+    </label>
+    <span class="desc">(mass of top rod)</span>
    </li>
    <li>
-    <label>&beta;</label>
-    <input type="number" id="b" step="0.01" value="1.5" />
+    <label>m<sub>b</sub> =
+     <input type="number" id="mb" step="0.1" min="0" value="1" /> kg
+    </label>
+    <span class="desc">(mass of bottom rod)</span>
    </li>
    <li>
-    <label>v<sub>&alpha;</sub></label>
-    <input type="number" id="da" step="0.01" value="0" />
+    <label>l<sub>a</sub> =
+     <input type="number" id="la" step="0.1" min="0" value="1" /> m
+    </label>
+    <span class="desc">(length of top rod)</span>
    </li>
    <li>
-    <label>v<sub>&beta;</sub></label>
-    <input type="number" id="db" step="0.01" value="0" />
+    <label>l<sub>b</sub> =
+     <input type="number" id="lb" step="0.1" min="0" value="1" /> m
+    </label>
+    <span class="desc">(length of bottom rod)</span>
    </li>
    <li>
-    <label>g</label>
-    <input type="number" id="g" step="0.01" value="9.81" />
+    <label>&alpha; =
+     <input type="number" id="a" step="0.01" value="1" > rad
+    </label>
+    <span class="desc">(angle from vertical of top rod)</span>
    </li>
    <li>
-    <label>m<sub>a</sub></label>
-    <input type="number" id="ma" step="0.1" min="0" value="1" />
+    <label>&beta; =
+     <input type="number" id="b" step="0.01" value="1.5" /> rad
+    </label>
+    <span class="desc">(angle from vertical of bottom rod)</span>
    </li>
    <li>
-    <label>m<sub>b</sub></label>
-    <input type="number" id="mb" step="0.1" min="0" value="1" />
+    <label>v<sub>&alpha;</sub> =
+     <input type="number" id="da" step="0.01" value="0" /> rad s<sup>-1</sup>
+    </label>
+    <span class="desc">(initial angular velocity of top rod)</span>
    </li>
    <li>
-    <label>l<sub>a</sub></label>
-    <input type="number" id="la" step="0.1" min="0" value="1" />
+    <label>v<sub>&beta;</sub> =
+     <input type="number" id="db" step="0.01" value="0" /> rad s<sup>-1</sup>
+    </label>
+    <span class="desc">(initial angular velocity of bottom rod)</span>
    </li>
    <li>
-    <label>l<sub>b</sub></label>
-    <input type="number" id="lb" step="0.1" min="0" value="1" />
+    <label>g =
+     <input type="number" id="g" step="0.01" value="9.81" /> m s<sup>-2</sup>
+    </label>
+    <span class="desc">(downward acceleration due to gravity)</span>
    </li>
   </ul>
   <button onclick="setParams()">Run</button>
